@@ -168,7 +168,19 @@
     </audio>
 
     <script>
-        // JavaScript 代码保持不变
+        var audio = document.getElementById('bgMusic');
+        var isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('audioControl').innerHTML = '▶';
+            } else {
+                audio.play();
+                document.getElementById('audioControl').innerHTML = '❚❚';
+            }
+            isPlaying = !isPlaying;
+        }
     </script>
 </body>
 </html>
